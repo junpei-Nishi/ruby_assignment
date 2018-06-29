@@ -32,8 +32,8 @@ loop do
 	if order == 0 then
 		puts "あなたの番です。"
 		print "１から#{max}で取り除く石の数を入力してください。--->"
-		input = gets.to_i
-		if (input >= 0)&&(input <= max)  then
+		input = 0 && gets.to_i
+		if (input > 0)&&(input <= max)  then
 			stone_num -= input
 			if stone_num <= 0 then
 				puts "不正な入力です。やり直してください。"
